@@ -1,0 +1,48 @@
+body {
+	color: white;
+}
+
+.smaller-card {
+	margin-top: 240px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	margin-right: 80px;
+}
+
+.profile-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #111729;
+	width: 280px;
+	height: 70px;
+	border-radius: 20px;
+	padding: 0 10px;
+}
+
+.avatar {
+	width: 110px;
+	border-radius: 10px;
+	border: 6px solid #364153;
+}
+
+hr {
+	border-left: 1px solid #364153;
+	background-color: #364153;
+	border-radius: 10px;
+	height: 70%;
+}
+
+.name {
+	padding: 10px 0;
+	font-size: 32px;
+	font-weight: 400;
+}
+
+h3 {
+	color: #364153;
+	font-weight: 500;
+	font-size: 16px;
+}
