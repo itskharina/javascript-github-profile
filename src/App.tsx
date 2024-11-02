@@ -4,9 +4,38 @@ import SmallerCard from './components/SmallerCard';
 import Input from './components/Input';
 import { useState, useEffect } from 'react';
 
+interface GithubUser {
+	id: number;
+	name: string;
+	bio: string;
+	followers: number;
+	following: number;
+	avatar_url: string;
+	location: string;
+}
+
+interface GithubRepo {
+	id: number;
+	name: string;
+	description: string | null;
+	forks: number;
+	stargazers_count: number;
+	updated_at: string;
+}
+
+const defaultUserData: GithubUser = {
+	id: 0,
+	name: '',
+	bio: '',
+	followers: 0,
+	following: 0,
+	avatar_url: '',
+	location: '',
+};
+
 function App() {
-	const [cardData, setCardData] = useState<any[]>([]);
-	const [userData, setUserData] = useState<any>({});
+	const [cardData, setCardData] = useState<GithubRepo[]>([]);
+	const [userData, setUserData] = useState<GithubUser>(defaultUserData);
 	const [inputValue, setInputValue] = useState('github');
 	const [accountType, setAccountType] = useState('Organization');
 
@@ -39,7 +68,7 @@ function App() {
 				description={item.description}
 				forks={item.forks}
 				stars={item.stargazers_count}
-				updated={item.updated_at}
+				updated_at={item.updated_at}
 			/>
 		);
 	});

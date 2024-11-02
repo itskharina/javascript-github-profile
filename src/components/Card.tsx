@@ -5,14 +5,14 @@ import nesting from '../assets/Nesting.svg';
 export interface CardProps {
 	id: number;
 	name: string;
-	description: string;
+	description: string | null;
 	forks: number;
 	stars: number;
-	updated: string;
+	updated_at: string;
 }
 
 export default function Card(props: CardProps) {
-	const updatedDate = new Date(props.updated);
+	const updatedDate = new Date(props.updated_at);
 	const dateNow = new Date();
 	const daysAgo = Math.floor(
 		(dateNow.getTime() - updatedDate.getTime()) / (1000 * 3600 * 24)
