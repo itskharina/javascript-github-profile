@@ -10,7 +10,7 @@
 ### The challenge
 
 - Created a GitHub profile search application
-- Live demo: https://itskharina.github.io/javascript-github-profile/
+- Live demo: 
 
 Users should be able to:
 
