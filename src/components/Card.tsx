@@ -2,6 +2,7 @@ import './Card.css';
 import star from '../assets/Star.svg';
 import nesting from '../assets/Nesting.svg';
 
+// SmallerCard component for displaying user profile information
 export interface CardProps {
 	id: number;
 	name: string;
@@ -11,11 +12,15 @@ export interface CardProps {
 	updated_at: string;
 }
 
+// Card component for displaying GitHub repository information
 export default function Card(props: CardProps) {
+	// Calculate days since last update
 	const updatedDate = new Date(props.updated_at);
 	const dateNow = new Date();
 	const daysAgo = Math.floor(
-		(dateNow.getTime() - updatedDate.getTime()) / (1000 * 3600 * 24)
+		// Calculate the difference between the current date and the updated date in milliseconds
+		// Convert the time difference from milliseconds to days
+		(dateNow.getTime() - updatedDate.getTime()) / (1000 * 3600 * 24) // 1000 ms * 3600 seconds * 24 hours = milliseconds in one day
 	);
 
 	return (

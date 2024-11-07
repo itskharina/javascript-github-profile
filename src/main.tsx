@@ -4,6 +4,7 @@ import App from './App.tsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
+	// Used to highlight potential problems in an application
 	<React.StrictMode>
 		<App />
 	</React.StrictMode>

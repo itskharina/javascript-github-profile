@@ -9,22 +9,23 @@ export interface SmallerCardProps {
 	location: string;
 }
 
-function ProfileSection({
-	label,
-	value,
-}: {
+interface ProfileSectionProps {
 	label: string;
 	value: string | number;
-}) {
+}
+
+// ProfileSection component for displaying a label and value (used for followers, following, etc.)
+function ProfileSection(props: ProfileSectionProps) {
 	return (
 		<div className='profile-section'>
-			<h3>{label}</h3>
+			<h3>{props.label}</h3>
 			<hr />
-			<p>{value}</p>
+			<p>{props.value}</p>
 		</div>
 	);
 }
 
+// SmallerCard component for displaying user profile information
 export default function SmallerCard(props: SmallerCardProps) {
 	return (
 		<div className='smaller-card'>
